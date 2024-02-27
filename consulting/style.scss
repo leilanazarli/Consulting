@@ -6,6 +6,7 @@
     header{
         width: 100%;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: fixed;
         .container{
             display: flex;
             justify-content: space-between;
@@ -43,7 +44,7 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
-        padding: 10px 150px ;
+        padding: 200px 150px ;
             i{
                 padding: 15px;
                 border-radius: 50%;
@@ -235,6 +236,7 @@
         transform: scale(-1 , 1);
     }
 }
+
 .hero-banner-about{
     background-color: rgb(46,49,65);
     color: white;
@@ -313,13 +315,33 @@ footer{
         transform:  rotate(-0.5turn);
     }
     .container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
        .footer-title{
         h4{
-            
+            position: relative;
+            &::after{
+                position: absolute;
+                content: ' ';
+                width: 100%;
+                height: 2px;
+                background-color: #515261;
+                bottom: -10px;
+                left: 0;
+            }
+        }
+        p{
+            margin-top: 20px;
+            color: #7f8093;
         }
        }
        .footer-text{
+       display: flex;
+       justify-content: space-between;
+       gap: 30px;
         .row{
+        width: 50%;
             form{
                 .form-group{
                     display: flex;
@@ -329,8 +351,31 @@ footer{
                     input , textAREA{
                         background-color: rgb(67,72,87);
                     }
+                    textarea{
+                        border-radius: 5px;
+                    }
+                }
+                .btn{
+                    border-radius: 5px;
+                    background-color: transparent;
+                    border-color: white;
+                    color: white;
                 }
             }
+        }
+        .footer-text-right{
+            div{
+                i{
+                border:2px solid rgb(182, 182, 182) ;
+                border-radius: 50%;
+                padding: 10px;
+                margin-right: 10px;
+                }
+                a{
+                color: white;
+                text-decoration:underline dotted;
+                }
+                }
         }
        }
        .footer-end{
@@ -343,8 +388,9 @@ footer{
                 content: ' ';
                 width: 100%;
                 height: 1px;
-                top: 0;
-                left: 20px;
+                top: -10px;
+                left: 0;
+                background-color: #515261;
             }
         }
        }
